@@ -1,0 +1,167 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #151515;
+}
+
+/* Section Layout */
+.value-add-section {
+  padding: 100px 5% 200px;
+  background-color: #151515;
+  text-align: center;
+}
+
+/* Heading */
+.section-heading {
+  font-size: 3.5rem;
+  font-weight: 750;
+  color: white;
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Cards Container */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Card Styles */
+.value-card {
+  border-radius: 32px;
+  padding: 30px 60px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Desktop override: visible by default */
+@media (min-width: 992px) {
+  .value-card {
+    opacity: 1;
+  }
+}
+
+/* Hover effect for interactivity */
+.value-card:hover {
+  transform: scale(1.03) translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Color Variants */
+.value-card.orange {
+  background-color: #e8682d;
+  color: white;
+}
+
+.value-card.white {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+.value-card.lemon {
+  background-color: #dcf766;
+  color: #1a1a1a;
+}
+
+.value-card.blue {
+  background-color: #5fc2ed;
+  color: #1a1a1a;
+}
+
+/* Icon */
+.icon svg {
+  width: 53px;
+  height: 53px;
+  margin-bottom: 15px;
+}
+
+/* Number */
+.value {
+  font-size: 5rem;
+  font-weight: 720;
+  margin-bottom: 0px;
+}
+
+/* Description */
+.description {
+  font-size: 1.125rem;
+  color: #6b7178;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.cards-container .value-card:first-child .description {
+  color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .value-card {
+    width: 48%;
+    max-width: 350px;
+    height: 250px;
+    padding: 32px 24px;
+    border-radius: 28px;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .value-card:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .value-card:nth-child(even) {
+    margin-left: auto;
+    margin-right: 80px;
+  }
+
+  .value-card:nth-child(odd) {
+    margin-left: 80px;
+    margin-right: auto;
+  }
+
+  .icon svg {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+  }
+
+  .value {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-top: 5px;
+    color: #6b7178;
+    text-align: left;
+    word-break: break-word;
+  }
+
+  .cards-container .value-card:first-child .description {
+    color: white;
+  }
+}
