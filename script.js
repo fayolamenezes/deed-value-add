@@ -65,8 +65,8 @@ ScrollTrigger.matchMedia({
           },
           y: 0,
           opacity: 1,
-          duration: 1,
-          delay: i * 0.15,
+          duration: 0.5,
+          delay: i * 0.05,
           ease: "power2.out"
         }
       );
