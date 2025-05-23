@@ -2,16 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Value Add Section</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
   <section class="value-add-section" id="twoscTrigger">
-        <!-- ✅ Wavy SVG Line (mobile only) -->
     <svg class="mobile-line" viewBox="0 0 100 650" preserveAspectRatio="xMinYMin meet" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M10,0
@@ -30,61 +29,53 @@
 
     <h2 class="section-heading">Value add</h2>
     <div class="cards-container">
-      
-      <!-- Card 1 -->
+
       <div class="value-card orange">
         <div class="icon">
-          <!-- SVG Icon -->
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15.8284 9.17157C17.3905 10.7337 17.3905 13.2663 15.8284 14.8284C14.2663 16.3905 11.7337 16.3905 10.1716 14.8284C8.60948 13.2663 8.60948 10.7337 10.1716 9.17157C11.7337 7.60948 14.2663 7.60948 15.8284 9.17157" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M24.468 36H17.254C14.352 36 12 33.314 12 30.002V29.996C12 26.684 14.352 23.998 17.254 23.998H30.744C33.646 23.998 35.998 21.312 35.998 18V18C36 14.682 33.644 11.996 30.74 12L22.5 12.01" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M32.68 40.3681L38.458 36.9501C39.18 36.5221 39.18 35.4761 38.458 35.0501L32.68 31.6321C31.938 31.1921 31 31.7281 31 32.5901V39.4101C31 40.2721 31.938 40.8081 32.68 40.3681Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15.8284 9.17157C17.3905 10.7337 17.3905 13.2663 15.8284 14.8284C14.2663 16.3905 11.7337 16.3905 10.1716 14.8284C8.60948 13.2663 8.60948 10.7337 10.1716 9.17157C11.7337 7.60948 14.2663 7.60948 15.8284 9.17157" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M24.468 36H17.254C14.352 36 12 33.314 12 30.002V29.996C12 26.684 14.352 23.998 17.254 23.998H30.744C33.646 23.998 35.998 21.312 35.998 18V18C36 14.682 33.644 11.996 30.74 12L22.5 12.01" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M32.68 40.3681L38.458 36.9501C39.18 36.5221 39.18 35.4761 38.458 35.0501L32.68 31.6321C31.938 31.1921 31 31.7281 31 32.5901V39.4101C31 40.2721 31.938 40.8081 32.68 40.3681Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
         <div class="value">58%</div>
         <p class="description">Increase in pick up point use</p>
       </div>
 
-      <!-- Card 2 -->
       <div class="value-card white">
         <div class="icon">
-          <!-- SVG Icon -->
           <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M35.3187 14.6822C41.5694 20.9333 41.5692 31.068 35.3183 37.3188C29.0673 43.5697 18.9326 43.5697 12.6816 37.3188C6.43066 31.068 6.43048 20.9333 12.6812 14.6822C15.6831 11.6802 19.7546 9.99365 24 9.99365C28.2453 9.99365 32.3168 11.6802 35.3187 14.6822" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M19.9983 3.99163H28.0016" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M28.4678 23.7021L22.8855 29.2845L19.5281 25.9391" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M42.0075 11.9953L38.0058 7.99365L40.0067 9.99449L35.3187 14.6824" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M35.3187 14.6822C41.5694 20.9333 41.5692 31.068 35.3183 37.3188C29.0673 43.5697 18.9326 43.5697 12.6816 37.3188C6.43066 31.068 6.43048 20.9333 12.6812 14.6822C15.6831 11.6802 19.7546 9.99365 24 9.99365C28.2453 9.99365 32.3168 11.6802 35.3187 14.6822" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M19.9983 3.99163H28.0016" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M28.4678 23.7021L22.8855 29.2845L19.5281 25.9391" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M42.0075 11.9953L38.0058 7.99365L40.0067 9.99449L35.3187 14.6824" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
         <div class="value">27%</div>
         <p class="description">Decreased in driver overtime</p>
       </div>
 
-      <!-- Card 3 -->
       <div class="value-card blue">
         <div class="icon">
-          <!-- SVG Icon (Repeated icon used again in original site) -->
           <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M35.3187 14.6822C41.5694 20.9333 41.5692 31.068 35.3183 37.3188C29.0673 43.5697 18.9326 43.5697 12.6816 37.3188C6.43066 31.068 6.43048 20.9333 12.6812 14.6822C15.6831 11.6802 19.7546 9.99365 24 9.99365C28.2453 9.99365 32.3168 11.6802 35.3187 14.6822" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M19.9983 3.99163H28.0016" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M28.4678 23.7021L22.8855 29.2845L19.5281 25.9391" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M35.3187 14.6822C41.5694 20.9333 41.5692 31.068 35.3183 37.3188C29.0673 43.5697 18.9326 43.5697 12.6816 37.3188C6.43066 31.068 6.43048 20.9333 12.6812 14.6822C15.6831 11.6802 19.7546 9.99365 24 9.99365C28.2453 9.99365 32.3168 11.6802 35.3187 14.6822" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M19.9983 3.99163H28.0016" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M28.4678 23.7021L22.8855 29.2845L19.5281 25.9391" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
         <div class="value">23%</div>
         <p class="description">Decreased in customer phone calls</p>
       </div>
 
-      <!-- Card 4 -->
       <div class="value-card lemon">
         <div class="icon">
-            <!-- SVG Icon: Actual from original site -->
-            <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M42.3519 31.9979V16.0019C42.3519 14.5719 41.5899 13.2519 40.3519 12.5379L26.4999 4.53989C25.2619 3.82589 23.7379 3.82589 22.4999 4.53989L8.64795 12.5379C7.40995 13.2519 6.64795 14.5739 6.64795 16.0019V31.9959C6.64795 33.4259 7.40995 34.7459 8.64795 35.4599L22.4999 43.4599C23.7379 44.1739 25.2619 44.1739 26.4999 43.4599L40.3519 35.4619C41.5899 34.7479 42.3519 33.4259 42.3519 31.9979Z" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12.84 25.26L18.84 28.74" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M7.18396 14.002L24.5 24L41.816 14.002" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M24.5 44V24" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M33.1598 18.9998L15.5798 8.53979" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+          <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M42.3519 31.9979V16.0019C42.3519 14.5719 41.5899 13.2519 40.3519 12.5379L26.4999 4.53989C25.2619 3.82589 23.7379 3.82589 22.4999 4.53989L8.64795 12.5379C7.40995 13.2519 6.64795 14.5739 6.64795 16.0019V31.9959C6.64795 33.4259 7.40995 34.7459 8.64795 35.4599L22.4999 43.4599C23.7379 44.1739 25.2619 44.1739 26.4999 43.4599L40.3519 35.4619C41.5899 34.7479 42.3519 33.4259 42.3519 31.9979Z" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12.84 25.26L18.84 28.74" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M7.18396 14.002L24.5 24L41.816 14.002" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M24.5 44V24" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M33.1598 18.9998L15.5798 8.53979" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
         </div>
         <div class="value">40%</div>
         <p class="description">Decreased in failed deliveries</p>

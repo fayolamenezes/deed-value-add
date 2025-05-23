@@ -1,20 +1,17 @@
-/* Base Styles */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: #151515;
 }
 
-/* Section Layout */
 .value-add-section {
-  padding: 150px 5% 200px;
+  padding: 150px 5% 250px;
   background-color: #151515;
   text-align: center;
   position: relative;
   z-index: 1;
 }
 
-/* Heading */
 .section-heading {
   font-size: 4rem;
   font-weight: 750;
@@ -24,7 +21,6 @@ body {
   transform: translateY(30px);
 }
 
-/* Cards Container */
 .cards-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -32,7 +28,6 @@ body {
   justify-content: center;
 }
 
-/* Card Styles */
 .value-card {
   border-radius: 32px;
   padding: 30px 60px;
@@ -45,20 +40,17 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Desktop override: visible by default */
 @media (min-width: 992px) {
   .value-card {
     opacity: 1;
   }
 }
 
-/* Hover effect */
 .value-card:hover {
   transform: scale(1.03) translateY(-5px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* Color Variants */
 .value-card.orange {
   background-color: #e8682d;
   color: white;
@@ -79,21 +71,18 @@ body {
   color: #1a1a1a;
 }
 
-/* Icon */
 .icon svg {
   width: 53px;
   height: 53px;
   margin-bottom: 15px;
 }
 
-/* Value */
 .value {
   font-size: 5rem;
   font-weight: 720;
   margin-bottom: 0px;
 }
 
-/* Description */
 .description {
   font-size: 1.125rem;
   color: #6b7178;
@@ -105,7 +94,6 @@ body {
   color: white;
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
   .cards-container {
     display: flex;
@@ -126,7 +114,6 @@ body {
     box-sizing: border-box;
   }
 
-  /* Alternating horizontal offsets to follow wave pattern */
   .value-card:nth-child(odd) {
     align-self: flex-end;
     margin-right: 90px;
@@ -160,13 +147,12 @@ body {
   }
 }
 
-/* Wavy Background Line: Mobile Only */
 .mobile-line {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: auto;        /* Or fixed width like 100px */
+  width: auto;
   height: 1500px;
   z-index: 0;
   pointer-events: none;
@@ -174,7 +160,6 @@ body {
   transition: color 0.4s ease-in-out;
   display: none;
 }
-
 
 @media (max-width: 768px) {
   .mobile-line {

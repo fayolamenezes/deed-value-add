@@ -1,8 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.matchMedia({
-
-  // ✅ Desktop: Movement only
   "(min-width: 992px)": function () {
     gsap.to(".section-heading", {
       scrollTrigger: {
@@ -22,7 +20,7 @@ ScrollTrigger.matchMedia({
         {
           y: 0,
           duration: 1,
-          delay: i * 0.10,
+          delay: i * 0.1,
           ease: "power2.out",
           scrollTrigger: {
             trigger: card,
@@ -34,7 +32,6 @@ ScrollTrigger.matchMedia({
     });
   },
 
-  // ✅ Mobile: Movement + fade-in + wavy line color
   "(max-width: 991px)": function () {
     gsap.to(".section-heading", {
       scrollTrigger: {
@@ -51,7 +48,6 @@ ScrollTrigger.matchMedia({
     const cards = gsap.utils.toArray(".value-card");
     const mobileLine = document.querySelector(".mobile-line");
 
-    // Animate cards: fade-in only once
     cards.forEach((card, i) => {
       gsap.fromTo(card,
         { y: 40, opacity: 0 },
@@ -64,20 +60,14 @@ ScrollTrigger.matchMedia({
           scrollTrigger: {
             trigger: card,
             start: "top 90%",
-            toggleActions: "play none none none"  // ⬅️ better than once:true for this case
+            toggleActions: "play none none none"
           }
         }
       );
     });
 
-
-    // 🎨 Animate wavy line color — always, even on scroll up
-    const colorMap = [
-      "#e8682d", // Card 1
-      "#ffffff", // Card 2
-      "#5fc2ed", // Card 3
-      "#dcf766"  // Card 4
-    ];
+    // Mobile wavy line color sync
+    const colorMap = ["#e8682d", "#ffffff", "#5fc2ed", "#dcf766"];
 
     if (mobileLine) {
       cards.forEach((card, i) => {
@@ -102,5 +92,4 @@ ScrollTrigger.matchMedia({
       });
     }
   }
-
 });
