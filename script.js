@@ -2,8 +2,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.matchMedia({
 
-  // ✅ Desktop: Movement only
+  // ✅ Desktop Only
   "(min-width: 992px)": function () {
+    // Animate section heading
     gsap.to(".section-heading", {
       scrollTrigger: {
         trigger: "#twoscTrigger",
@@ -16,9 +17,10 @@ ScrollTrigger.matchMedia({
       ease: "power2.out"
     });
 
+    // Animate value cards vertically
     gsap.utils.toArray(".value-card").forEach((card, i) => {
       gsap.fromTo(card,
-        { y: 50 }, // ❌ no opacity
+        { y: 50 },
         {
           scrollTrigger: {
             trigger: card,
@@ -28,15 +30,16 @@ ScrollTrigger.matchMedia({
           },
           y: 0,
           duration: 1,
-          delay: i * 0.10,
+          delay: i * 0.1,
           ease: "power2.out"
         }
       );
     });
   },
 
-  // ✅ Mobile: Movement + fade-in
+  // ✅ Mobile Only
   "(max-width: 991px)": function () {
+    // Animate section heading
     gsap.to(".section-heading", {
       scrollTrigger: {
         trigger: "#twoscTrigger",
@@ -49,6 +52,7 @@ ScrollTrigger.matchMedia({
       ease: "power2.out"
     });
 
+    // Animate value cards with fade-in
     gsap.utils.toArray(".value-card").forEach((card, i) => {
       gsap.fromTo(card,
         { y: 40, opacity: 0 },
@@ -62,11 +66,37 @@ ScrollTrigger.matchMedia({
           y: 0,
           opacity: 1,
           duration: 1,
-          delay: i * 0.2,
+          delay: i * 0.15,
           ease: "power2.out"
         }
       );
     });
+
+    // 🎨 Mobile wavy line color change
+    const colorMap = [
+      "#e8682d", // Card 1 (orange)
+      "#ffffff", // Card 2 (white)
+      "#5fc2ed", // Card 3 (blue)
+      "#dcf766"  // Card 4 (lemon)
+    ];
+
+    const mobileLine = document.querySelector(".mobile-line");
+
+    if (mobileLine) {
+      gsap.utils.toArray(".value-card").forEach((card, i) => {
+        ScrollTrigger.create({
+          trigger: card,
+          start: "top center",
+          onEnter: () => {
+            gsap.to(mobileLine, {
+              color: colorMap[i] || "#e8682d",
+              duration: 0.4,
+              ease: "power2.out"
+            });
+          }
+        });
+      });
+    }
   }
 
 });
