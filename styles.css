@@ -131,13 +131,13 @@ body {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
   }
 
-  .value-card:nth-child(even) {
+  .value-card:nth-child(odd) {
     margin-left: auto;
-    margin-right: 80px;
+    margin-right: 65px;
   }
 
-  .value-card:nth-child(odd) {
-    margin-left: 80px;
+  .value-card:nth-child(even) {
+    margin-left: 65px;
     margin-right: auto;
   }
 
