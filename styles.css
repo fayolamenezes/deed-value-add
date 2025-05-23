@@ -115,7 +115,7 @@ body {
   }
 
   .value-card {
-    width: 75%;
+    width: 65%;
     max-width: 360px;
     min-height: 220px;
     padding: 28px 24px;
@@ -127,14 +127,14 @@ body {
   }
 
   /* Alternating horizontal offsets to follow wave pattern */
-  .value-card:nth-child(odd) {
+  .value-card:nth-child(even) {
     align-self: flex-end;
-    margin-right: 40px;
+    margin-right: 80px;
   }
 
-  .value-card:nth-child(even) {
+  .value-card:nth-child(odd) {
     align-self: flex-start;
-    margin-left: 40px;
+    margin-left: 80px;
   }
 
   .icon svg {
