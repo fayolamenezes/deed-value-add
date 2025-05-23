@@ -1,6 +1,14 @@
 gsap.registerPlugin(ScrollTrigger);
 
+// Set initial state of the heading for all screen sizes
+gsap.set(".section-heading", {
+  y: 50,
+  opacity: 0,
+  scale: 0.9
+});
+
 ScrollTrigger.matchMedia({
+  // Desktop
   "(min-width: 992px)": function () {
     gsap.to(".section-heading", {
       scrollTrigger: {
@@ -10,6 +18,7 @@ ScrollTrigger.matchMedia({
       },
       y: 0,
       opacity: 1,
+      scale: 1,
       duration: 1.4,
       ease: "power2.out"
     });
@@ -32,6 +41,7 @@ ScrollTrigger.matchMedia({
     });
   },
 
+  // Mobile
   "(max-width: 991px)": function () {
     gsap.to(".section-heading", {
       scrollTrigger: {
@@ -41,6 +51,7 @@ ScrollTrigger.matchMedia({
       },
       y: 0,
       opacity: 1,
+      scale: 1,
       duration: 1.3,
       ease: "power2.out"
     });
