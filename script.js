@@ -2,9 +2,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.matchMedia({
 
-  // ✅ Desktop Only
+  // ✅ Desktop: Movement only
   "(min-width: 992px)": function () {
-    // Animate section heading
     gsap.to(".section-heading", {
       scrollTrigger: {
         trigger: "#twoscTrigger",
@@ -17,29 +16,26 @@ ScrollTrigger.matchMedia({
       ease: "power2.out"
     });
 
-    // Animate value cards vertically with quicker fade-in and less delay
     gsap.utils.toArray(".value-card").forEach((card, i) => {
       gsap.fromTo(card,
         { y: 50 },
         {
+          y: 0,
+          duration: 1,
+          delay: i * 0.10,
+          ease: "power2.out",
           scrollTrigger: {
             trigger: card,
             start: "top 90%",
-            scrub: 1.2,
             once: true
-          },
-          y: 0,
-          duration: 0.7,          // shortened from 1
-          delay: i * 0.05,       // shortened from 0.1
-          ease: "power2.out"
+          }
         }
       );
     });
   },
 
-  // ✅ Mobile Only
+  // ✅ Mobile: Movement + fade-in + wavy line color
   "(max-width: 991px)": function () {
-    // Animate section heading
     gsap.to(".section-heading", {
       scrollTrigger: {
         trigger: "#twoscTrigger",
@@ -52,44 +48,52 @@ ScrollTrigger.matchMedia({
       ease: "power2.out"
     });
 
-    // Animate value cards with quicker fade-in and less delay
-    gsap.utils.toArray(".value-card").forEach((card, i) => {
+    const cards = gsap.utils.toArray(".value-card");
+    const mobileLine = document.querySelector(".mobile-line");
+
+    // Animate cards: fade-in only once
+    cards.forEach((card, i) => {
       gsap.fromTo(card,
         { y: 40, opacity: 0 },
         {
+          y: 0,
+          opacity: 1,
+          duration: 0.4,
+          delay: i * 0.05,
+          ease: "power2.out",
           scrollTrigger: {
             trigger: card,
             start: "top 90%",
-            scrub: 1,
-            once: true
-          },
-          y: 0,
-          opacity: 1,
-          duration: 0.4,        // shortened from 0.5
-          delay: i * 0.03,     // shortened from 0.05
-          ease: "power2.out"
+            toggleActions: "play none none none"  // ⬅️ better than once:true for this case
+          }
         }
       );
     });
 
-    // 🎨 Mobile wavy line color change
+
+    // 🎨 Animate wavy line color — always, even on scroll up
     const colorMap = [
-      "#e8682d", // Card 1 (orange)
-      "#ffffff", // Card 2 (white)
-      "#5fc2ed", // Card 3 (blue)
-      "#dcf766"  // Card 4 (lemon)
+      "#e8682d", // Card 1
+      "#ffffff", // Card 2
+      "#5fc2ed", // Card 3
+      "#dcf766"  // Card 4
     ];
 
-    const mobileLine = document.querySelector(".mobile-line");
-
     if (mobileLine) {
-      gsap.utils.toArray(".value-card").forEach((card, i) => {
+      cards.forEach((card, i) => {
         ScrollTrigger.create({
           trigger: card,
           start: "top center",
           onEnter: () => {
             gsap.to(mobileLine, {
-              color: colorMap[i] || "#e8682d",
+              color: colorMap[i],
+              duration: 0.4,
+              ease: "power2.out"
+            });
+          },
+          onEnterBack: () => {
+            gsap.to(mobileLine, {
+              color: colorMap[i],
               duration: 0.4,
               ease: "power2.out"
             });
