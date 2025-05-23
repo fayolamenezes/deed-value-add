@@ -127,14 +127,14 @@ body {
   }
 
   /* Alternating horizontal offsets to follow wave pattern */
-  .value-card:nth-child(even) {
+  .value-card:nth-child(odd) {
     align-self: flex-end;
-    margin-right: 80px;
+    margin-right: 90px;
   }
 
-  .value-card:nth-child(odd) {
+  .value-card:nth-child(even) {
     align-self: flex-start;
-    margin-left: 80px;
+    margin-left: 90px;
   }
 
   .icon svg {
