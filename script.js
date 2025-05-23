@@ -17,7 +17,7 @@ ScrollTrigger.matchMedia({
       ease: "power2.out"
     });
 
-    // Animate value cards vertically
+    // Animate value cards vertically with quicker fade-in and less delay
     gsap.utils.toArray(".value-card").forEach((card, i) => {
       gsap.fromTo(card,
         { y: 50 },
@@ -29,8 +29,8 @@ ScrollTrigger.matchMedia({
             once: true
           },
           y: 0,
-          duration: 1,
-          delay: i * 0.1,
+          duration: 0.7,          // shortened from 1
+          delay: i * 0.05,       // shortened from 0.1
           ease: "power2.out"
         }
       );
@@ -52,7 +52,7 @@ ScrollTrigger.matchMedia({
       ease: "power2.out"
     });
 
-    // Animate value cards with fade-in
+    // Animate value cards with quicker fade-in and less delay
     gsap.utils.toArray(".value-card").forEach((card, i) => {
       gsap.fromTo(card,
         { y: 40, opacity: 0 },
@@ -65,8 +65,8 @@ ScrollTrigger.matchMedia({
           },
           y: 0,
           opacity: 1,
-          duration: 0.5,
-          delay: i * 0.05,
+          duration: 0.4,        // shortened from 0.5
+          delay: i * 0.03,     // shortened from 0.05
           ease: "power2.out"
         }
       );
