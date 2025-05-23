@@ -133,11 +133,11 @@ body {
 
   .value-card:nth-child(odd) {
     margin-left: auto;
-    margin-right: 65px;
+    margin-right: 85px;
   }
 
   .value-card:nth-child(even) {
-    margin-left: 65px;
+    margin-left: 85px;
     margin-right: auto;
   }
 
